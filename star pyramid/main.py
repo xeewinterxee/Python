@@ -1,21 +1,26 @@
-# def piramida_bintang(n):
-#     for i in range(1,n+1):
-#         for j in range(n-i):
-#             print("_",end="")
-#         for k in range(i):
-#             print("*",end="")
-#         print()
+# menambahkan ada urutan baris
+def piramida(n):
+    for i in range(1,n+1):
+        for j in range(n-i):
+            print(" ",end="")
+        for k in range(2*i-1):
+            print("*",end="")
+        print(f"{' ' * (n-i)} baris ke {i}")
 
-# def piramida_bintang_terbalik(n):
-#     for i in range(n, 0, -1):  # Memulai dari n hingga 1
-#         for j in range(n - i):
-#             print(" ", end="")
-#         for k in range(2 * i - 1):
-#             print("*", end="")
-#         print()
+# menambahkan ada urutan baris
+def piramida_terbalik(n):
+    baris = 2 * n 
+    for i in range(5,0,-1):
+        for j in range(n-i):
+            print(" ",end="")
+        for k in range(2*i-1):
+            print("*",end="")
+        print(f"{' ' * (n-i)} baris ke {baris - i + 1}")
 
-# piramida_bintang(5)
-# piramida_bintang_terbalik(5)
+piramida(5)
+print()
+piramida(5)
+piramida_terbalik(5)
 
 # hasilnya tidak ketengah karna tidak ganjil
 # def piramid(n):
